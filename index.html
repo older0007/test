@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+  <title>Tower Lines — Pixi.js MVP v2</title>
+  <style>
+    html, body { margin:0; padding:0; background:#111; height:100%; }
+    #gameRoot { position:fixed; inset:0; display:flex; align-items:center; justify-content:center; }
+    canvas { touch-action: none; }
+    .hud { position:fixed; top:8px; left:8px; right:8px; display:flex; justify-content:space-between; gap:8px;
+           font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color:white; pointer-events:none;}
+    .badge { background: rgba(0,0,0,0.35); padding:8px 12px; border-radius:12px; }
+    .bottom { position:fixed; bottom:10px; left:50%; transform:translateX(-50%); color:#bbb; font-size:12px; }
+  </style>
+  <script type="module" crossorigin src="./assets/index-B2lkuiDM.js"></script>
+</head>
+<body>
+  <div id="gameRoot"></div>
+  <div class="hud">
+    <div class="badge" id="scoreBlue">Blue: 0</div>
+    <div class="badge" id="timer">90s</div>
+    <div class="badge" id="scoreRed">Red: 0</div>
+  </div>
+  <div class="bottom">Drag from a blue tower to link; optional atlas: place /assets/atlas.json and .png</div>
+  <script src="https://unpkg.com/pixi.js@7/dist/pixi.min.js"></script>
+</body>
+</html>
